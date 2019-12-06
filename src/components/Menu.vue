@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="logo test">
-                        <router-link :to="{path: `/`}">Job Search Service</router-link>
+                        <router-link v-if="userType === 'USER'" :to="{path: `/`}">Job Search Service</router-link>
+                        <router-link v-if="userType === 'ADMIN'" :to="{path: `/search`}">Job Search Service</router-link>
                     </div>
                 </div>
                 <div class="col-md-6">
